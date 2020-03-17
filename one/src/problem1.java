@@ -1,10 +1,12 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class problem1 {
     //1. Write a program to calculate the sum and average of the values from an array and to find the min and max values.
-public static void main (String[] args){
-    //int a[] = new int[5];
-   int a []= {1, 2, 3, 4, 5};
+public static void main (String[] args)
+{
+
+    int a []= {1, 2, 3, 4, 5};
     int sum = 0;
     int average = 0;
 
@@ -16,48 +18,74 @@ average=  sum / 5;
 
     System.out.println(sum);
     System.out.println(average);
+    validate();
+    second();
+    readadd();
+    rectangle();
+    reverse();
+    temperature();
+    sorting();
+    iterating();
+    grid();
+    generates();
+    days();
+    pozitive();
+    nterms();
+    npalindrome();
+    order();
+    verification();
+    convert();
+    decimaltobinary();
 }
 //2. Write a program to test if an array contains a specific value. Specific value is given as console input.
 
 public static int second(){
 
-    int b[10];
+
+    int b []= {1, 2, 3, 4, 5};
     System.out.println(" please provide that number that you want ot find");
 
      Scanner num = new Scanner(System.in);
 
+
+
     for(int i= 0; i < b.length -1; i++)
     {
-        Scanner  b[i] = new Scanner(System.in);
-    }
-
-    for(int i= 0; i < b[10] -1; i++)
-    {
-        if(num == b[i])
+        if(num.equals(b[i])
         {
             System.out.println("the number was found in the list");
         }
-        else
-            System.out.println("the number is not present in the list");
+         System.out.println("the number is not present in the list");
+
     }
 }
 
 //3. Write a program to sort a numeric array and a string array.
 public static void sorting()
-    {  //int [] a = new int[6];
+    {
        int a []= {1, 2, 3, 4, 5};
-      char b [] ={j, k, z, n, g};
+      String b [] ={s, k, z, n, g};
+        Arrays.sort(b);
+        Arrays.sort(a);
 
+        for(int i = 0;i < a.length - 1; i++)
+        {
+            System.out.println("the sorted ones:" + a[i]);
+        }
+        for(int j = 0; j < b.length -1; j++)
+        {
+            System.out.println("the sorted ones:" + b[j]);
+        }
     }
 // 4. Write a program to copy all the even numbers from an array by iterating the array.
 public static void iterating(){
-    //int [] a = new int[6];
+
     int a[] = {1, 2, 3, 5, 4, 6 };
     int[] b = new int[3];
     int[] c = new int[3];
     int j = 0;
     int k = 0;
- for (int i = 0; i <a[6] - 1; i++ ){
+ for (int i = 0; i <a.length - 1; i++ ){
      if(a[i] % 2 == 0)
      {
        b[j] =  a[i];
@@ -69,18 +97,18 @@ public static void iterating(){
        k++;
      }
 
-     for (i = 0; i <b[3] - 1; i++ ){
+     for (i = 0; i <b.length - 1; i++ ){
          System.out.println(b[1]); // the even
      }
 
-     for (j = 0; j <c[3] - 1; j++ ){
+     for (j = 0; j <c.length - 1; j++ ){
          System.out.println(c[1]); // the odd
      }
  }
 }
 
 // 5. Write a program to print the following grid. Each print statement should be 1 char.
-public static  int grid(){
+public static  void grid(){
     int [][]a = new int[10][54];
 
 
@@ -89,7 +117,7 @@ public static  int grid(){
 
     //Write a program that reads a floating-point number and prints "zero" if the number is zero. Otherwise, print "positive" or "negative".
 // Add "small" if the absolute value of the number is less than 1, or "large" if it exceeds 1,000,000.
-    public static void pozitive(void) {
+    public static void pozitive() {
 
         Scanner in = new Scanner(System.in);
         System.out.print("Please provide the number: ");
@@ -123,7 +151,7 @@ public static  int grid(){
     /**
      */
     // Write a program that takes a number from the user and generates an integer between 1 and 7 and displays the name of the weekday.
-    public static void generates(void) {
+    public static void generates() {
         Scanner in = new Scanner(System.in);
         System.out.print("add value: ");
         int input = in.nextInt();
@@ -159,7 +187,7 @@ public static  int grid(){
     }
 
     //Write a program to find the number of days in a month.
-    public static void days(void) {
+    public static void days() {
         Scanner in = new Scanner(System.in);
         System.out.print("add value: ");
         int input = in.nextInt();
@@ -216,7 +244,7 @@ public static  int grid(){
     // Write a program that takes the user to provide a single character from the alphabet.
     // Print Vowel or Consonant, depending on the user input.
 // If the user input is not a letter (between a and z or A and Z), or is a string of length > 1, print an error message.
-    public static void validate(void) {
+    public static void validate() {
         Scanner in = new Scanner(System.in);
         System.out.print("add value: ");
         int input = in.nextInt();
@@ -226,7 +254,7 @@ public static  int grid(){
     }
 
 // Write a program to display n terms of natural numbers and their sum.
-public static void nterms(void) {
+public static void nterms() {
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
     int input = in.nextInt();
@@ -240,7 +268,7 @@ public static void nterms(void) {
 
 }
 //Write a program to check if a string given as input is a palindrome.
-public static void npalindrome(void) {
+public static void npalindrome() {
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
     int input = in.nextInt();
@@ -264,7 +292,7 @@ public static void npalindrome(void) {
 
 //Write a program that accepts three numbers from the user and prints "increasing" if the numbers are in increasing order,
 // "decreasing" if the numbers are in decreasing order, and "Neither increasing or decreasing order" otherwise.
-public static void  order(void) {
+public static void  order() {
 
 
         System.out.println("Please provide the first number");
@@ -295,7 +323,7 @@ public static void  order(void) {
 }
 
 //Write a program to convert temperature from Fahrenheit to Celsius degree.
-public static void temperature(void) {
+public static void temperature() {
     System.out.println("Please provide temperature in celsius");
         Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
@@ -311,7 +339,7 @@ public static void temperature(void) {
 
 }
 //Write a program that reads an integer between 0 and 1000 and adds all the digits in the integer.
-public static void readadd(void) {
+public static void readadd() {
     System.out.println("Please provide the number that you want to use");
         Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
@@ -327,7 +355,7 @@ public static void readadd(void) {
 
 // Write a program to takes the user for a distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds),
 // and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
-public static void convert(void) {
+public static void convert() {
     System.out.println("Please provide the distance");
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
@@ -359,7 +387,7 @@ float milespsec = (kmpsec / 1.609f);
 
 //16. Write a program that accepts two integers from the user and then prints the sum, the difference, the product, the average,
 // the distance (the difference between integer), the maximum (the larger of the two integers), the minimum (smaller of the two integers).
-public static void verification(void) {
+public static void verification() {
     System.out.println("Please provide the first number");
     Scanner in1 = new Scanner(System.in);
     System.out.print("add value: ");
@@ -402,7 +430,7 @@ public static void verification(void) {
 }
 
 //Write a program to get whole and fractional parts from a double value.
-public static void validate(void) {
+public static void validate() {
     System.out.println("Please provide the number that you want to use");
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
@@ -413,14 +441,15 @@ public static void validate(void) {
     {
         f = input - (int) input;
         a = (int) input;
+        System.out.println("the integer part is:" +a);
+        System.out.println("the fractional part is:" +f);
     }
-    System.out.println("the integer part is:" +a);
-    System.out.println("the fractional part is:" +f);
+
 
 }
 
 //Write a program to reverse an integer number.
-public static void reverse(void) {
+public static void reverse() {
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
     int input = in.nextInt();
@@ -436,7 +465,7 @@ public static void reverse(void) {
     System.out.println("the reverse number is: " +reversen);
 }
 //19. Write a program to print the area and perimeter of a rectangle given the width and height.
-public static void rectangle(void) {
+public static void rectangle() {
     System.out.println("please provide the width ");
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
@@ -457,7 +486,7 @@ public static void decimaltobinary() {
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
     int input = in.nextInt();
-    int b[] = new int[];
+    int b[] = new int[10];
     int j = 0;
     while (input > 0)
     {

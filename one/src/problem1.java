@@ -1,3 +1,5 @@
+import javafx.util.Pair;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -5,10 +7,12 @@ public class problem1 {
     //1. Write a program to calculate the sum and average of the values from an array and to find the min and max values.
 public static void main (String[] args)
 {
-
+    String  [] c = new String [5];
+    c = new String[]{"s", "k", "z", "n", "g"};
     int a []= {1, 2, 3, 4, 5};
     int sum = 0;
     int average = 0;
+     int num1 = 5;
 
     for(int i = 0; a.length - 1 > i; i++ )
     {
@@ -16,15 +20,34 @@ public static void main (String[] args)
     }
 average=  sum / 5;
 
+    int min, max;
+
+    for(int i = 0; i < a.length -1; i++)
+    {   if(a[i] < a[i+1])
+      {
+        min = a[i];
+        max = a[i + 1];
+      }
+      else
+      {
+        min = a[i +1];
+        max = a[i];
+      }
+        System.out.println(min);
+        System.out.println(max);
+    }
+
     System.out.println(sum);
     System.out.println(average);
+
+
     validation();
-    second();
+    int secondm = second(a, num1);
     readadd();
     rectangle();
     reverse();
     temperature();
-    sorting();
+    sorting(a, c);
     iterating();
     grid();
     generates();
@@ -39,13 +62,13 @@ average=  sum / 5;
 }
 //2. Write a program to test if an array contains a specific value. Specific value is given as console input.
 
-public static void second(){
+public static int second(int [] b ,int num){
 
 
-    int b []= {1, 2, 3, 4, 5};
+    b = new int[]{1, 2, 3, 4, 5};
     System.out.println(" please provide that number that you want ot find");
     Scanner in = new Scanner(System.in);
-    int num = in.nextInt();
+     num = in.nextInt();
 
     for(int i= 0; i < b.length -1; i++)
     {
@@ -56,16 +79,18 @@ public static void second(){
          System.out.println("the number is not present in the list");
 
     }
+    return num;
 }
 
 //3. Write a program to sort a numeric array and a string array.
-public static void sorting()
-    {
-       int a []= {1, 2, 3, 4, 5};
-      String  [] b = new String [5];
+public static Pair sorting(int []a, String [] b)
+    {   Pair sorted = new  Pair();
+        int a []= {1, 2, 3, 4, 5};
+        b = new String[5];
         b = new String[]{"s", "k", "z", "n", "g"};
         Arrays.sort(b);
         Arrays.sort(a);
+
 
         for(int i = 0;i < a.length - 1; i++)
         {
@@ -75,6 +100,7 @@ public static void sorting()
         {
             System.out.println("the sorted ones:" + b[j]);
         }
+      return true;
     }
 // 4. Write a program to copy all the even numbers from an array by iterating the array.
 public static void iterating(){

@@ -18,7 +18,7 @@ average=  sum / 5;
 
     System.out.println(sum);
     System.out.println(average);
-    validate();
+    validation();
     second();
     readadd();
     rectangle();
@@ -39,19 +39,17 @@ average=  sum / 5;
 }
 //2. Write a program to test if an array contains a specific value. Specific value is given as console input.
 
-public static int second(){
+public static void second(){
 
 
     int b []= {1, 2, 3, 4, 5};
     System.out.println(" please provide that number that you want ot find");
-
-     Scanner num = new Scanner(System.in);
-
-
+    Scanner in = new Scanner(System.in);
+    int num = in.nextInt();
 
     for(int i= 0; i < b.length -1; i++)
     {
-        if(num.equals(b[i])
+        if(b[i] == num)
         {
             System.out.println("the number was found in the list");
         }
@@ -64,7 +62,8 @@ public static int second(){
 public static void sorting()
     {
        int a []= {1, 2, 3, 4, 5};
-      String b [] ={s, k, z, n, g};
+      String  [] b = new String [5];
+        b = new String[]{"s", "k", "z", "n", "g"};
         Arrays.sort(b);
         Arrays.sort(a);
 
@@ -430,7 +429,7 @@ public static void verification() {
 }
 
 //Write a program to get whole and fractional parts from a double value.
-public static void validate() {
+public static void validation() {
     System.out.println("Please provide the number that you want to use");
     Scanner in = new Scanner(System.in);
     System.out.print("add value: ");
